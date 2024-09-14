@@ -1,0 +1,910 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Keshav Nayyar's Portfolio</title>
+        <link rel="icon" href="../images/barbell favicon.png" type="image/x-icon">
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+        <style>
+/* Background animation */
+body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            font-family: 'Helvetica', sans-serif;
+        }
+
+        @keyframes gradientBG {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Header Text Styling */
+        #intro {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            color: white;
+        }
+
+        #intro h1 {
+            font-size: 64px;
+            text-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        #intro p {
+            font-size: 24px;
+            margin-top: 20px;
+            max-width: 800px;
+            text-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .actions a {
+            margin-top: 40px;
+            padding: 10px 20px;
+            background-color: #ffffff;
+            color: #333;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .actions a:hover {
+            background-color: #23a6d5;
+            color: #fff;
+            transform: scale(1.1);
+        }
+       .image.main {
+    background: #ffffff; /* White background for the card */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow */
+    overflow: hidden; /* Clips the content to fit the border radius */
+    transition: transform 0.3s; /* Smooth transformation on hover */
+    margin: 0 10px; /* Adjust margins between images */
+    flex: 1 0 auto; /* Flex grow and basis adjustments */
+}
+.image.main:hover {
+    transform: scale(1.03); /* Slightly enlarges the card on hover */
+}
+.image.main img {
+    width: 100%; /* Ensure the image fills the container */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Removes bottom space/gap */
+}
+.image-container {
+    display: flex;
+    justify-content: space-around; /* Adjust to distribute space evenly or use 'space-between' */
+    align-items: center; /* Align images vertically */
+    padding: 0; /* Remove padding around the image container */
+    margin: 0 auto; /* Center the container with no external margins */
+    max-width: 90%; /* Adjust max width to suit your layout needs */
+}
+
+		
+			.skills-section {
+				background: #222; /* Dark background for better contrast */
+				color: #fff; /* Sets light text color for the entire section */
+				padding: 40px 0; /* Top and bottom padding */
+				text-align: center; /* Center align the text */
+			}
+		
+			.skills-section h2 {
+				color: #ffffff; /* White color for the heading */
+				text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6); /* Text shadow for depth */
+			}
+		
+			.skills-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid layout */
+				gap: 20px; /* Space between grid items */
+				padding: 20px;
+				justify-content: center; /* Center grid items */
+			}
+		
+			.skill {
+				background: rgba(255, 255, 255, 0.1); /* Semi-transparent white background for skill cards */
+				border-radius: 10px; /* Rounded corners */
+				padding: 20px;
+				transition: transform 0.3s ease; /* Smooth transform effect */
+			}
+		
+			.skill:hover {
+				transform: scale(1.05); /* Slightly enlarge on hover */
+			}
+		
+			.skill img {
+				max-width: 80px; /* Standard size for icons */
+				margin-bottom: 15px; /* Space between the icon and the text */
+			}
+		
+			.skill h3 {
+				margin-bottom: 10px; /* Margin below the title */
+				color: #ffd700; /* Gold color for titles */
+			}
+		
+			.skill p {
+				font-size: 16px;
+				margin: 0;
+				color: #ccc; /* Light grey color */
+			}
+			p {
+        margin: 0; /* Remove margin for all <p> elements */
+        padding: 0; /* Remove padding for all <p> elements */
+    }
+	.certificates-section {
+    background: #222; /* Dark background for contrast */
+    color: #fff; /* Light text color */
+    padding: 40px 0; /* Padding for spacing */
+    text-align: center; /* Center-align the text */
+}
+
+.certificates-section h2 {
+    color: #ffffff; /* White color for heading */
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6); /* Text shadow for depth */
+}
+
+.certificates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid layout */
+    gap: 20px; /* Space between grid items */
+    padding: 20px;
+    justify-content: center; /* Center-align the grid items */
+}
+
+.certificate {
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px;
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.certificate:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.certificate-img {
+  width: 50%; /* Set the image width to 50% of its parent container */
+  height: auto; /* Maintain the aspect ratio */
+  max-width: 600px; /* Set a maximum width so it doesn't get too large */
+}
+
+.certificate h3 {
+    margin-bottom: 10px; /* Margin below the title */
+    color: #ffd700; /* Gold color for titles */
+}
+
+.certificate p {
+    font-size: 16px;
+    margin: 0;
+    color: #ccc; /* Light grey color */
+}
+.coursework-section {
+    padding: 50px 0;
+    background-color: #f0f4f7; /* Light background for the overall section */
+    text-align: center;
+    font-family: 'Helvetica', sans-serif;
+}
+
+/* Main Coursework Header */
+.coursework-section .major h2 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+/* Section Headers */
+.coursework-section .major h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #2d87ff; /* Blue color to distinguish section */
+    border-bottom: 2px solid #2d87ff; /* Add underline effect */
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+/* Coursework Grid Styling */
+.coursework-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 30px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* Individual Course Styling */
+.course {
+    background: white; /* White background for course cards */
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course:hover {
+    transform: translateY(-10px); /* Lift up on hover */
+    box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+.course h3 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.course p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Icons inside the course */
+.icons img {
+    margin: 10px;
+}
+
+/* Divider Styling */
+.coursework-divider {
+    border: none;
+    height: 3px;
+    background-color: #e0e0e0;
+    margin: 50px 0;
+}
+
+/* Business Coursework Section Styling */
+.business-coursework {
+    background-color: #fdfdfd; /* Slightly different background color */
+    padding: 50px 0;
+}
+.sidebar {
+    display: none;
+}
+
+/* Sidebar Items (Icons) */
+.sidebar-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    background-color: #2f3640; /* Dark background */
+    color: #ffffff;
+    border-radius: 50%;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar-item i {
+    font-size: 24px; /* Icon size */
+}
+
+/* Hover Effect for Sidebar Icons */
+.sidebar-item:hover {
+    background-color: #3a98f0; /* Light blue color */
+    transform: scale(1.1);
+    color: white;
+}
+
+  .education-section {
+    text-align: center;
+    margin: 40px 0;
+  }
+
+  .education-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .education-item {
+    max-width: 600px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .education-logo {
+    margin-bottom: 20px;
+  }
+
+  .umd-logo {
+    width: 200px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .university-name {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    font-weight: bold;
+  }
+
+  p {
+    margin: 5px 0;
+    font-size: 1.1em;
+  }
+
+  strong {
+    color: #333;
+  }
+
+  /* Add responsive styling */
+  @media (max-width: 768px) {
+    .education-item {
+      padding: 15px;
+    }
+
+    .umd-logo {
+      width: 150px;
+    }
+
+    .university-name {
+      font-size: 1.3em;
+    }
+
+    p {
+      font-size: 1em;
+    }
+  }
+  .experience-section {
+    text-align: center;
+    margin: 40px 0;
+  }
+
+  .experience-grid {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  .experience-item {
+    max-width: 600px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    display: flex;
+    gap: 20px;
+  }
+
+  .experience-logo {
+    flex-shrink: 0;
+  }
+
+  .experience-logo-img {
+    width: 100px;
+    height: auto;
+  }
+
+  .experience-content {
+    flex-grow: 1;
+  }
+
+  h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+
+  p, ul {
+    font-size: 1.1em;
+    margin: 5px 0;
+  }
+
+  ul {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .experience-item {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .experience-logo {
+      margin-bottom: 10px;
+    }
+
+    .experience-logo-img {
+      width: 150px;
+    }
+    .certification-section {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.certification-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.certificate-img {
+  width: 50%; /* Reduces the size to 50% of the parent container width */
+  height: auto;
+  max-width: 600px; /* Ensures it doesn't exceed a certain size */
+  margin: 0 auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .certificate-img {
+    width: 80%; /* For smaller screens, use 80% of the container width */
+  }
+}
+  }
+</style>
+
+		</style>
+    </head>
+    <body class="is-preload">
+    </head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper" class="fade-in">
+
+				<!-- Intro -->
+                <div id="intro">
+                    <h1>Keshav<br />Nayyar</h1>
+                    <p>Undergraduate Computer Scientist skilled in Java, Python, C, C++, R, SQL, OCAML, JavaScript, HTML5, XML, MATLAB, ReactJS<br />
+                        <a href="http://www.linkedin.com/in/keshav-nayyar" target="_blank" rel="noopener noreferrer">LinkedIn</a><br>
+                        <a href="https://github.com/KeshavNayyar1" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    </p>
+                    <div class="actions">
+                        <a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a>
+                    </div>
+                </div>
+
+        <!-- Wrapper -->
+        <div id="wrapper">
+
+            <!-- Header -->
+            <header id="header">
+                <a href="./index.html" class="logo">Keshav Nayyar</a>
+            </header>
+
+            <!-- Nav -->
+            <nav id="nav">
+                <ul class="links">
+                    <li class="active"><a href="./index.html">Bio</a></li>
+                    <li><a href="./generic.html">Projects</a></li>
+                   
+                </ul>
+						<ul class="icons">
+							<li>
+							  <a href="https://www.linkedin.com/in/keshav-nayyar/" class="icon brands fa-linkedin" target="_blank">
+								<span class="label">LinkedIn</span>
+							  </a>
+							</li>
+						
+							<li>
+							  <a href="https://github.com/KeshavNayyar1" class="icon brands fa-github" target="_blank">
+								<span class="label">GitHub</span>
+							  </a>
+							</li>
+						  </ul>
+					</nav>
+                    <div class="sidebar">
+                        <a href="#home" class="sidebar-item"><i class="fas fa-home"></i></a>
+                        <a href="#about" class="sidebar-item"><i class="fas fa-user"></i></a>
+                        <a href="#skills" class="sidebar-item"><i class="fas fa-tools"></i></a>
+                        <a href="#projects" class="sidebar-item"><i class="fas fa-briefcase"></i></a>
+                        <a href="#education" class="sidebar-item"><i class="fas fa-graduation-cap"></i></a>
+                        <a href="#contact" class="sidebar-item"><i class="fas fa-envelope"></i></a>
+                    </div>
+                    
+                    <!-- Sections with corresponding IDs -->
+                    <section id="home"> <!-- Your Home Content --> </section>
+                    <section id="about"> <!-- Your About Content --> </section>
+                    <section id="skills"> <!-- Your Skills Content --> </section>
+                    <section id="projects"> <!-- Your Projects Content --> </section>
+                    <section id="education"> <!-- Your Education Content --> </section>
+                    <section id="contact"> <!-- Your Contact Content --> </section>
+
+            <!-- Main -->
+            <div id="main">
+                
+
+                <!-- Post -->
+                <section class="post">
+                    <header class="major">
+                        <h1>About Me</h1>
+                        <div class="image-container">
+                            <div class="image main left">
+                                <img src="../images/PROFILEPIC.png" alt="" style="width: 350px; height: auto;" />
+                            </div>
+                            <div class="image main right">
+                                <img src="../images/Workout photo.jpg" alt="" style="width: 380px; height: auto;" />
+                            </div>
+                        </div>
+                        <br>
+                        <p>Hello! I’m Keshav Nayyar, an enthusiastic undergraduate student at the University of Maryland, College Park, pursuing a Bachelor’s Degree in Computer Science with a minor in General Business. My academic journey is guided by a strong passion for understanding the fundamentals of computer science, coupled with a keen interest in the practical applications of data science and web development.</p>
+                        <p>My coursework and projects reflect a broad interest in software engineering, where I have honed my skills in programming languages such as Java, Python, and JavaScript, and technologies like ReactJS and SQL. These tools have equipped me to tackle challenges in both frontend and backend development, making me a versatile candidate for roles in software development and data analysis.</p>
+                        <p>Outside the classroom, I actively seek out collaborative projects that allow me to apply my technical skills in real-world settings, focusing on building scalable and efficient solutions. My goal is to continually grow as a tech professional and contribute to projects that have significant social and economic impacts.</p>
+                        <p>In my free time, I enjoy exploring new technologies, reading about emerging trends in the tech industry, and contributing to open source projects, which helps me stay connected with the global tech community and continually refine my skills and knowledge.</p>
+                        <p>I also have a hobby in weight lifting. I am eager to bring my background in computer science and business, along with my problem-solving abilities, to a dynamic team where I can contribute to impactful projects and grow my expertise in the field of technology.</p>
+                    </header>
+                    
+                    <section id="education" class="education-section">
+                        <header class="major">
+                          <h2>Education</h2>
+                        </header>
+                        <div class="education-grid">
+                          <div class="education-item">
+                            <div class="education-logo">
+                              <img src="../images/Maryland M.png" alt="University of Maryland Logo" class="umd-logo" />
+                            </div>
+                            <h3 class="university-name">University of Maryland, College Park</h3>
+                            <p><strong>Degree:</strong> B.S. in Computer Science</p>
+                            <p><strong>Minor:</strong> General Business</p>
+                            <p><strong>Graduation:</strong> Expected December 2025</p>
+                            <p><strong>G.P.A.</strong> 3.68/4.00</p>
+                            <p><strong>Dean's List:</strong> Fall 2022, Spring 2023</p>
+                          </div>
+                        </div>
+                      </section>
+                <!-- Experience Section -->
+                <section id="experience" class="experience-section">
+                    <header class="major">
+                      <h2>Experience</h2>
+                    </header>
+                    <div class="experience-grid">
+                      
+                      <!-- Experience Item 1 -->
+                      <div class="experience-item">
+                        <div class="experience-logo">
+                          <img src="../images/Food Lion.png" alt="Food Lion Logo" class="experience-logo-img">
+                        </div>
+                        <div class="experience-content">
+                          <h3>Cashier</h3>
+                          <p><strong>Company:</strong> Food Lion</p>
+                          <p><strong>Location:</strong> Woodbine, MD</p>
+                          <p><strong>Duration:</strong> Aug. 2021 - Feb. 2022</p>
+                          <p><strong>Responsibilities:</strong></p>
+                          <ul>
+                            <li>Managed transactions efficiently at the checkout counter, ensuring accurate processing of cash, card, and other payment methods.</li>
+                            <li>Provided excellent customer service by assisting shoppers with inquiries, bagging groceries, and maintaining a clean and organized workspace.</li>
+                          </ul>
+                        </div>
+                      </div>
+                  
+                      <!-- Experience Item 2 -->
+                      <div class="experience-item">
+                        <div class="experience-logo">
+                          <img src="../images/Kumon Logo.png" alt="Kumon Logo" class="experience-logo-img">
+                        </div>
+                        <div class="experience-content">
+                          <h3>Math Tutor</h3>
+                          <p><strong>Company:</strong> Kumon</p>
+                          <p><strong>Location:</strong> Owings Mills, MD</p>
+                          <p><strong>Duration:</strong> Nov. 2019 - July 2021[In-Person/Zoom]</p>
+                          <p><strong>Responsibilities:</strong></p>
+                          <ul>
+                            <li>Provided individualized math instruction to students from elementary to high school, both in-person and via Zoom, to improve their understanding and performance.</li>
+                            <li>Assessed student progress, adjusted lesson plans, and offered personalized feedback to help students achieve academic success.</li>
+                          </ul>
+                        </div>
+                      </div>
+                  
+                    </div>
+                  </section>
+                <!-- Skills Section -->
+                <section id="skills" class="skills-section">
+                    <header class="major">
+                        <h2>My Skills</h2>
+                    </header>
+                    <div class="skills-grid">
+                        <div class="skill">
+                            <img src="../images/pythonLOGO.png" alt="Python" />
+                            <h3>Python</h3>
+							<p style="margin: 0;"></p>
+                            Expert in scripting, data manipulation, and web backends using Django.
+                        </div>
+                        <div class="skill">
+                            <img src="../images/Java Image.png" alt="Java" />
+                            <h3>JAVA</h3>
+                            <p style="margin: 0;"></p>
+							Skilled in enterprise software, Android apps, and interactive web applications
+                        </div>
+                        <div class="skill">
+                            <img src="../images/C LOGO.png" alt="C" />
+                            <h3>C</h3>
+                            <p></p>
+							Utilized for systems programming and performance-critical applications.
+                        </div>
+                        <div class="skill">
+                            <img src="../images/HTML5.png" alt="HTML5" />
+                            <h3>HTML5</h3>
+                            <p></p>
+							Proficient in creating structured and interactive web content
+                        </div>
+						<div class="skill">
+							<img src="../images/R language.png" alt="R Language" />
+							<h3>R</h3>
+							<p></p>
+							Used for statistical analyses and data visualization projects.
+						</div>
+						<div class="skill">
+							<img src="../images/JAVAscript.png" alt="JavaScript" />
+							<h3>JavaScript</h3>
+							<p></p>
+							Experienced in dynamic web features and single-page applications.
+						</div>
+						<div class="skill">
+							<img src="../images/Reactjs.png" alt="ReactJS" />
+							<h3>ReactJS</h3>
+							<p></p>
+							Specialized in building efficient user interfaces and SPAs.
+						</div>
+						<div class="skill">
+							<img src="../images/SQL.png" alt="SQL" />
+							<h3>SQL</h3>
+							<p></p>
+							Proficient in database management and complex query writing.
+						</div>
+						<div class="skill">
+							<img src="../images/OCAML.png" alt="OCAML" />
+							<h3>OCAML</h3>
+							<p></p>
+						    Applied in functional programming and algorithm optimization.
+						</div>
+						<div class="skill">
+							<img src="../images/MATLAB.png" alt="MATLAB" />
+							<h3>MATLAB</h3>
+							<p></p>
+							Used for numerical computing and engineering simulations.
+						</div>
+						<div class="skill">
+							<img src="../images/CSS3.png" alt="CSS3" />
+							<h3>CSS3</h3>
+							<p></p>
+							Expert in responsive design and modern web aesthetics.
+						</div>
+						<div class="skill">
+							<img src="../images/C++.png" alt="C++" />
+							<h3>C++</h3>
+							<p></p>
+							Applied in system software, game development, and resource-constrained applications.
+						</div>
+                    </div>
+                </section>
+				<!-- Certificates Section -->
+				<section class="certificates-section">
+					<header class="major">
+						<h2>My Certifications</h2>
+					</header>
+					<div class="certificates-grid">
+						<div class="certificate">
+							<!-- Wrapping the image and text in a clickable link -->
+							<a href="https://verify.openedg.org/" target="_blank">
+								<img src="../images/CERTIFICATEPICTURE.png" alt="PCAP - Python Certified Associate Programmer" class="certificate-img" />
+								<h3>PCAP - Python Certified Associate Programmer</h3>
+							</a>
+							<p><u>Note: When on website: "https://verify.openedg.org/" enter the code: 2WGB.6RMZ.bPDG to be granted access.</u></p>
+<p>Skills Obtained: Fundamentals of Python, Object-Oriented Programming, Data Collections, Exceptions and File Handling, Functions and Modules, Control Flow Mechanisms.</p>
+<p>Issued by Python Institute - Demonstrates my knowledge of Python and coding fundamentals.</p>
+					</div>
+				</section>
+<!-- Resume Section -->
+
+<section class="coursework-section">
+    <header class="major">
+        <h2>Technical Coursework</h2>
+    </header>
+    
+    <div class="coursework-grid">
+        <div class="course" style="text-align: center;">
+            <h3>Web Application Development with JavaScript</h3>
+            <img src="../images/JAVAscript.png" alt="JavaScript" style="width:50px;"/>
+            <img src="../images/HTML5.png" alt="Python" style="width:50px;"/>
+            <img src="../images/CSS3.png" alt="Python" style="width:50px;"/>
+            <p></p>Fundamentals of building interactive, dynamic, and responsive web applications using JavaScript, focusing on front-end development and client-side scripting.</p>
+        </div>
+
+        <div class="course" style="text-align: center;">
+            <h3>Introduction to Machine Learning</h3>
+            <img src="../images/pythonLOGO.png" alt="Python" style="width:50px;"/>
+            <p></p>Introduces the core concepts of machine learning, including supervised and unsupervised learning techniques, neural networks, and model evaluation, with an emphasis on real-world applications.
+        </div>
+
+        <div class="course" style="text-align: center;">
+            <h3>Design and Analysis of Computer Algorithms</h3>
+            <p></p>Covers the theory behind designing efficient algorithms, analyzing their performance, and understanding key algorithmic paradigms such as divide-and-conquer, dynamic programming, greedy methods, etc.
+        </div>
+
+        <div class="course" style="text-align: center;">
+            <h3>Algorithms</h3>
+            <img src="../images/pythonLOGO.png" alt="Python" style="width:50px;"/>
+            <p></p>Advanced algorithmic techniques, including optimization algorithms, graph theory, and computational complexity, while emphasizing practical problem-solving skills.
+        </div>
+
+        <div class="course" style="text-align: center;">
+            <h3>Introduction to Data Science</h3>
+            <img src="../images/pythonLOGO.png" alt="Python" style="width:50px;"/>
+            <img src="../images/SQL.png" alt="SQL" style="width:80px;"/>
+            <p></p>Explores the foundational principles of data science, focusing on data collection, cleaning, manipulation, and visualization, along with an introduction to databases, data analysis, and statistical methods, using Python and SQL.
+        </div>
+
+        <div class="course" style="text-align: center;">
+            <h3>Organization of Programming Languages</h3>
+            <img src="../images/OCAML.png" alt="SQL" style="width:50px;"/>
+            <p></p>Examines the principles underlying the design and implementation of programming languages, covering syntax, semantics, type systems, and language translation.
+        </div>
+
+        <div class="course" style="text-align: center;">
+            <h3>Introduction to Computer Systems</h3>
+            <img src="../images/C LOGO.png" alt="SQL" style="width:50px;"/>
+            <p></p>Provides an introduction to how computer systems work, covering topics such as computer architecture, operating systems, memory management, and the interaction between hardware and software.
+        </div>
+
+        <div class="course" style="text-align: center;">
+            <h3>Discrete Structures</h3>
+            <p></p>Focuses on mathematical structures and techniques used in computer science, including logic, set theory, functions, relations, graph theory, and combinatorics, with applications in algorithms and programming.
+        </div>
+
+        <div class="course" style="text-align: center;">
+            <h3>Linear Algebra</h3>
+            <img src="../images/MATLAB.png" alt="SQL" style="width:80px;"/>
+            <p></p>Introduces the theory and application of matrices, vectors, vector spaces, and linear transformations, emphasizing their use in machine learning, computer graphics, and data science.
+        </div>
+
+        <div class="course" style="text-align: center;">
+            <h3>Calculus II</h3>
+            <p></p>Covers advanced calculus topics such as techniques of integration, infinite series, polar coordinates, and parametric equations, building on concepts from Calculus I with applications in science and engineering.
+        </div>
+
+        <div class="course" style="text-align: center;">
+            <h3>Calculus I</h3>
+            <p></p>Introduces fundamental concepts of calculus, including limits, derivatives, and integrals, with a focus on their application to real-world problems in engineering, physics, and economics.
+        </div>
+
+        <div class="course" style="text-align: center;">
+            <h3>Object Oriented Programming II</h3>
+            <img src="../images/Java Image.png" alt="SQL" style="width:80px;"/>
+            <p></p>Expands on the principles of object-oriented programming, including design patterns, inheritance, polymorphism, and encapsulation, with a focus on developing larger, more complex software systems.
+        </div>
+
+        <div class="course" style="text-align: center;">
+            <h3>Object Oriented Programming I</h3>
+            <img src="images/Java Image.png" alt="SQL" style="width:80px;"/>
+            <p></p>Provides a foundation in object-oriented programming, introducing basic concepts such as classes, objects, methods, and the use of encapsulation and inheritance to create modular, reusable software.
+        </div>
+    </div>
+    <hr class="coursework-divider"/> <!-- Horizontal Divider -->
+
+    <!-- Business Coursework Section -->
+    <section class="business-coursework">
+        <header class="major">
+            <h3>Business Coursework</h3>
+        </header>
+        <div class="coursework-grid">
+            <div class="course" style="text-align: center;">
+                <h3>Foundations of Marketing</h3>
+                <p></p>Introduction to marketing principles, strategies, and tools used to create value for customers, with an emphasis on product development, pricing strategies, and market research.
+            </div>
+    
+            <div class="course" style="text-align: center;">
+                <h3>Principles of Management</h3>
+                <p></p>Study of the core concepts in management, including leadership, organizational behavior, decision-making, and human resources, with a focus on improving business performance.
+            </div>
+    
+            <div class="course" style="text-align: center;">
+                <h3>Foundations of Accounting</h3>
+                <p></p>Fundamentals of accounting with an emphasis on financial reporting, analysis, and the preparation of financial statements for both external and internal stakeholders.
+            </div>
+    
+            <div class="course" style="text-align: center;">
+                <h3>Supply Chain Management</h3>
+                <p></p>Introduction to supply chain processes, including procurement, production, logistics, and inventory management, focusing on efficient coordination and optimization.
+            </div>
+        </div>
+    </section>
+</section>
+        <!-- Add more courses as needed -->
+    </div>
+</section>
+                <!-- Footer -->
+					<footer id="footer">
+						
+                        <section class="alt">
+                            <h3>Address</h3>
+                            <p>Woodbine, Maryland<br />
+                            </p>
+                        </section>
+                        <section>
+                            <h3>School Email</h3>
+                            <p>knayyar@terpmail.umd.edu</a></p>
+                        </section>
+                        <section>
+                            <h3>Work Email</h3>
+                            <p>knayyar1234567@gmail.com</a></p>
+                        </section>
+                        <section>
+                            <h3>Social</h3>
+                            <ul class="icons alt">
+                                <li><a href="https://github.com/KeshavNayyar1" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+                                <li><a href="https://www.linkedin.com/in/keshav-nayyar/" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                            </ul>
+                        </section>
+                    </section>
+                </footer>
+
+            <!-- Copyright -->
+            <div id="copyright">
+                <ul><li>&copy; Keshav Nayyar</li></ul>
+            </div>
+
+        </div>
+
+    <!-- Scripts -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery.scrollex.min.js"></script>
+        <script src="assets/js/jquery.scrolly.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+
+</body>
+</html>
+
+               
+
+            </div>
+
+            <!-- Scripts -->
+            <script src="assets/js/jquery.min.js"></script>
+            <script src="assets/js/jquery.scrollex.min.js"></script>
+            <script src="assets/js/jquery.scrolly.min.js"></script>
+            <script src="assets/js/browser.min.js"></script>
+            <script src="assets/js/breakpoints.min.js"></script>
+            <script src="assets/js/util.js"></script>
+            <script src="assets/js/main.js"></script>
+            <script>
+                var images = ["", "images/profile2.png", "images/profile3.png"];
+                var currentImage = 0;
+    
+                function changeImage() {
+                    currentImage++;
+                    if (currentImage >= images.length) currentImage = 0;
+                    document.getElementById('profilePic').children[0].src = images[currentImage];
+                }
+    
+                setInterval(changeImage, 5000); // Change image every 5 seconds
+            </script>
+
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
